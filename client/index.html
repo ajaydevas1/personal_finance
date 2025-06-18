@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartFinance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <h3 class="modal-title">Login to Your Account</h3>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <div class="form-footer">
+          <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+          <p><a href="#">Forgot password?</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal" id="signup-modal">
+    <div class="modal-content">
+      <h3 class="modal-title">Create an Account</h3>
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-confirm">Confirm Password</label>
+          <input type="password" id="signup-confirm" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+        <div class="form-footer">
+          <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dashboard Page -->
+  <div id="dashboard-page">
+    <header id="welcome-header">
+      Welcome to SmartFinance
+    </header>
+
+    <div class="container" id="main-content">
+      <!-- Home Page -->
+      <div class="card" id="home">
+        <h2>Current Balance</h2>
+        <p class="balance">₹12,500.00</p>
+      </div>
+
+      <div class="card" id="transactions">
+        <h2>Recent Transactions</h2>
+        <ul class="transactions">
+          <li><span>Freelance Work</span><span class="positive">+₹5,000</span></li>
+          <li><span>Groceries</span><span class="negative">-₹800</span></li>
+          <li><span>Electricity Bill</span><span class="negative">-₹1,200</span></li>
+        </ul>
+      </div>
+
+      <div class="card" id="budget">
+        <h2>Monthly Budget</h2>
+        <p>Budget: ₹15,000<br>Used: ₹8,000</p>
+      </div>
+
+      <!-- Wallets Page -->
+      <div class="card" id="wallets" style="display:none;">
+        <h2>Wallets</h2>
+        <p>Cash Wallet: ₹2,500</p>
+        <p>Bank Account: ₹10,000</p>
+      </div>
+
+      <!-- Profile Page -->
+      <div class="card" id="profile" style="display:none;">
+        <h2>User Profile</h2>
+        <p>Name: <span id="profile-name">Neon Madara</span></p>
+        <p>Email: <span id="profile-email">neon@example.com</span></p>
+        <p>Member Since: Jan 2025</p>
+      </div>
+    </div>
+
+    <nav class="bottom-nav">
+      <a href="#" onclick="switchTab('home')">Home</a>
+      <a href="#" onclick="switchTab('wallets')">Wallets</a>
+      <a href="#" onclick="alert('Add transaction feature coming soon!')">+ Add</a>
+      <a href="#" onclick="switchTab('budget')">Budget</a>
+      <a href="#" onclick="switchTab('profile')">Profile</a>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
