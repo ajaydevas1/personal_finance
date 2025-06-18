@@ -1,18 +1,3 @@
-# Unexpected end of JSON input
-
-## Description
-Unexpected end of JSON input
-
-## Features
-- Feature 1
-- Feature 2
-- Feature 3
-
-## Technologies Used
-- Technology 1
-- Technology 2
-- Technology 3
-
 ## Installation
 ```bash
 # Clone the repository
